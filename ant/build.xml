@@ -10,7 +10,7 @@
 	<property name="classes.dir" value="${basedir}/classes"/>
 	<property name="jar.dir" value="${basedir}/jar"/>
 	<property name="docs.dir" value="${basedir}/docs" />
-	
+
 	<!-- classpath -->
    	<path id="compile.classpath">
 		<pathelement path ="${lib.dir}/nanoxml-2.2.1.jar"/>
@@ -20,15 +20,24 @@
 
 	<!-- Remove classes directory for clean build -->
 	<target name="clean" description="Prepare for clean build">
-		<echo message="Cleaning out dir: ${classes.dir}"/>
-		<echo message="Cleaning out dir: ${docs.dir}"/>
-		<echo message="Cleaning out dir: ${jar.dir}"/>
-		<delete dir="${classes.dir}"/>
-		<mkdir  dir="${classes.dir}"/>
-		<delete dir="${docs.dir}"/>
-		<mkdir  dir="${docs.dir}"/>
-		<delete dir="${jar.dir}"/>
-		<mkdir  dir="${jar.dir}"/>
+	 <echo message="Cleaning out dir: ${classes.dir}"/>
+
+        <mkdir dir="${classes.dir}"/>
+        <delete includeEmptyDirs="true">
+            <fileset dir="${classes.dir}" includes="**/*" defaultexcludes="no"/>
+        </delete>
+
+        <echo message="Cleaning out dir: ${docs.dir}"/>
+        <mkdir dir="${docs.dir}"/>
+        <delete includeEmptyDirs="true">
+            <fileset dir="${docs.dir}" includes="**/*" defaultexcludes="no"/>
+        </delete>
+
+        <echo message="Cleaning out dir: ${jar.dir}"/>
+        <mkdir dir="${jar.dir}"/>
+        <delete includeEmptyDirs="true">
+            <fileset dir="${jar.dir}" includes="**/*" defaultexcludes="no"/>
+        </delete>
 	</target>
 
 	<!-- Check timestamp on files -->
@@ -51,7 +60,7 @@
 	<target name="build" depends="clean,prepare,resources">
 		<echo message="Creating classfiles in dir: ${classes.dir}"/>
 		<javac srcdir="${src.dir}" destdir="${classes.dir}">
-			<classpath refid="compile.classpath"/> 
+			<classpath refid="compile.classpath"/>
 		</javac>
 
 		<delete dir="${jar.dir}"/>
