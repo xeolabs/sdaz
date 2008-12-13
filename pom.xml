@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<project>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>vglviewer</groupId>
+    <artifactId>vglviewer</artifactId>
+    <name>vglviewer</name>
+    <version>1.0.0-SNAPSHOT</version>
+    <url>http://maven.apache.org</url>
+
+    <distributionManagement>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>neocoders-releases</id>
+            <url>http://www.neocoders.com/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>neocoders-snapshots</id>
+            <url>http://www.neocoders.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>openqa.org</id>
+            <name>Openqa Release Repository</name>
+            <url>http://nexus.openqa.org/content/repositories/releases/</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptors>
+                        <descriptor>
+                            src/main/assembly/bin.xml
+                        </descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>attached</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+    </dependencies>
+</project>
