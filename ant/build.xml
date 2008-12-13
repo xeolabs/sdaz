@@ -48,7 +48,7 @@
 	<!-- Copy any resource or configuration files into classes directory-->
 	<target name="resources">
 		<copy todir="${classes.dir}" includeEmptyDirs="no">
-			<fileset dir="java">
+			<fileset dir="src/main/java">
 				<patternset>
 					<exclude name="**/*.java"/>
 				</patternset>
