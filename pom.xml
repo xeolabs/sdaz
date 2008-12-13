@@ -2,9 +2,9 @@
 <project>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>sdaz</groupId>
-    <artifactId>sdaz</artifactId>
-    <name>sdaz</name>
+    <groupId>com.neocoders.sdaz</groupId>
+    <artifactId>com.neocoders.sdaz</artifactId>
+    <name>com.neocoders.sdaz</name>
     <version>1.0.0-SNAPSHOT</version>
     <url>http://maven.apache.org</url>
 

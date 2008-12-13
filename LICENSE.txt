@@ -1,4 +1,4 @@
-VGLViewer is distributed under the zlib/libpng license, which is OSS (Open Source Software) compliant.
+SDAZ is distributed under the zlib/libpng license, which is OSS (Open Source Software) compliant.
 
 Copyright (C) 2007 Lindsay S. Kay, All rights Reserved.
 
