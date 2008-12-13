@@ -2,7 +2,7 @@
 <project>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>sdaz</groupId>
+    <groupId>com.neocoders.sdaz</groupId>
     <artifactId>sdaz</artifactId>
     <name>sdaz</name>
     <version>1.0.0-SNAPSHOT</version>
