@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <project>
-
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.neocoders.sdaz</groupId>
     <artifactId>sdaz</artifactId>
