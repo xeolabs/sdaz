@@ -24,16 +24,8 @@
             <outputDirectory>bin</outputDirectory>
         </fileSet>
         <fileSet>
-            <directory>vgl-files</directory>
-            <outputDirectory>vgl-files</outputDirectory>
-        </fileSet>
-        <fileSet>
             <directory>docs</directory>
             <outputDirectory>docs</outputDirectory>
-        </fileSet>
-        <fileSet>
-            <directory>html</directory>
-            <outputDirectory>html</outputDirectory>
         </fileSet>
         <fileSet>
             <directory>src</directory>
