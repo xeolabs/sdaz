@@ -1,7 +1,7 @@
 <project name="VGL" basedir="../" default="build">
 
 	<!-- Project settings -->
-	<property file="build.properties"/>
+	<property file="${basedir}/ant/build.properties"/>
 
 	<!-- Local system paths -->
 	<property file="${basedir}/ant/build.properties"/>
@@ -48,7 +48,7 @@
 	<!-- Copy any resource or configuration files into classes directory-->
 	<target name="resources">
 		<copy todir="${classes.dir}" includeEmptyDirs="no">
-			<fileset dir="${src.dir}">
+			<fileset dir="java">
 				<patternset>
 					<exclude name="**/*.java"/>
 				</patternset>
