@@ -1,36 +1,30 @@
 
-VGLViewer V1.0.0
+VGLViewer
 ----------------------
 
 COSC427 Project,
 Lindsay Stanley Kay, 
-September 25,
-2004
+Written on September 25, 2004
+
+Mavenized on December, 2008.
 
 
 Contents of this Distribution
 -----------------------------
 
-lib - third-party JARs
+pom.xml - Maven POM which you can use to rebuild this project
+docs - JavaDocs
+html - HTML guide 
+lib - Java archives of VGLViewer and third-party dependencies
 src - VGLViewer source code
 vglFiles - sample VGL XML files 
 bin - scripts to run examples
+target - where artifacts will appear if you rebuild the project using the Maven POM
 
-The bin directory has two scripts:
+The bin directory has Linux/Windows scripts to run VGLViewer on the sample VGL files:
 
-	runDemo1.sh - run this for a demo of some polygons and text
-	runDemo2.sh - run this for a demo of text
-
-
-Building
---------
-
-You'll need to have ANT installed. I recommend V1.7. In the 'ant' directory, type
-
-    ant build
-
-This will create a 'classes' directory containing compiled class files, and a 'jar'
-directory containing a JAR archive of those classes.
+	runDemo1.sh / runDemo1.bat - run these for a demo of some polygons and text
+	runDemo2.sh / runDemo2.bat - run these for a demo of text
 
 
 Running
@@ -47,11 +41,11 @@ For Windows, there are a couple of equivalent batch files. If you get an error c
 about there not being enough memory allocated, you can edit these files to increase the value
 for the java -Xms option:
 
-    -Xms1000000
+    -Xms10000000
 
 
-Bugs
-----
+Couple of Bugs 
+--------------
 
 1.Spaces on either side of commas in polygon vertex lists cause null pointer exceptions
 
