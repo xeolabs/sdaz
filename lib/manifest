@@ -1,0 +1,2 @@
+Main-Class: vglViewer.VGLViewer
+Class-Path: nanoxml-2.2.1.jar nanoxml-sax-2.2.1.jar 

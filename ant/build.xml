@@ -1,0 +1,95 @@
+<project name="VGL" basedir="../" default="build">
+
+	<!-- Project settings -->
+	<property file="build.properties"/>
+
+	<!-- Local system paths -->
+	<property file="${basedir}/ant/build.properties"/>
+	<property name="src.dir" value="${basedir}/src"/>
+	<property name="lib.dir" value="${basedir}/lib"/>
+	<property name="classes.dir" value="${basedir}/classes"/>
+	<property name="jar.dir" value="${basedir}/jar"/>
+	<property name="docs.dir" value="${basedir}/docs" />
+	
+	<!-- classpath -->
+   	<path id="compile.classpath">
+		<pathelement path ="${lib.dir}/nanoxml-2.2.1.jar"/>
+		<pathelement path ="${lib.dir}/nanoxml-sax-2.2.1.jar"/>
+		<pathelement path ="${classpath}"/>
+	</path>
+
+	<!-- Remove classes directory for clean build -->
+	<target name="clean" description="Prepare for clean build">
+		<echo message="Cleaning out dir: ${classes.dir}"/>
+		<echo message="Cleaning out dir: ${docs.dir}"/>
+		<echo message="Cleaning out dir: ${jar.dir}"/>
+		<delete dir="${classes.dir}"/>
+		<mkdir  dir="${classes.dir}"/>
+		<delete dir="${docs.dir}"/>
+		<mkdir  dir="${docs.dir}"/>
+		<delete dir="${jar.dir}"/>
+		<mkdir  dir="${jar.dir}"/>
+	</target>
+
+	<!-- Check timestamp on files -->
+	<target name="prepare">
+		<tstamp/>
+	</target>
+
+	<!-- Copy any resource or configuration files into classes directory-->
+	<target name="resources">
+		<copy todir="${classes.dir}" includeEmptyDirs="no">
+			<fileset dir="${src.dir}">
+				<patternset>
+					<exclude name="**/*.java"/>
+				</patternset>
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- Normal build -->
+	<target name="build" depends="clean,prepare,resources">
+		<echo message="Creating classfiles in dir: ${classes.dir}"/>
+		<javac srcdir="${src.dir}" destdir="${classes.dir}">
+			<classpath refid="compile.classpath"/> 
+		</javac>
+
+		<delete dir="${jar.dir}"/>
+		<mkdir  dir="${jar.dir}"/>
+
+		<echo message="Creating JAR file in dir: ${jar.dir}"/>
+		<jar destfile="${jar.dir}/${project.distname}-${project.version}.jar" basedir="${classes.dir}" includes="**" excludes="">
+			<manifest>
+				<attribute name="Author" value="${author.name}"/>
+				<section name="Shared">
+					<attribute name="Title" value="${project.title}"/>
+					<attribute name="Vendor" value="${company.name}"/>
+				</section>
+				<section name="Copyright">
+					<attribute name="Copy" value="(C) ${company.name} 2006"/>
+				</section>
+			</manifest>
+		</jar>
+
+
+	</target>
+
+	<!-- Make documentation -->
+	<target name="javadocs" >
+		<echo message="Creating JavaDocs in dir: ${docs.dir}"/>
+		<mkdir dir="${docs.dir}"/>
+		<javadoc 	packagenames="${project.packagenames}"
+			 		sourcepath="${src.dir}"
+			 		destdir="${docs.dir}"
+			 		author="true"
+			 		version="true"
+			 		private="true"
+			 		use="true"
+			 		doctitle="${project.title} Version ${project.version} Documentation"
+			 		windowtitle="${project.title} Documentation"
+			 		bottom="Copyright (C); 2006 ${company.name}. All Rights Reserved.">
+			<classpath refid="compile.classpath"/>
+		</javadoc>
+	</target>
+</project>
+

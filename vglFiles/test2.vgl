@@ -1,0 +1,27 @@
+<vgl>
+<styleDef name="textStyle" style="font-family:helvetica; font-style:1; font-size:18; fill:#990000; stroke:#009900"/>
+<text origin="0.0,0.0" text="VGLViewer V1.0" styleRef="textStyle"/>
+<text origin="0.0,20.0" text="COSC427 Project," styleRef="textStyle"/>
+<text origin="0.0,40.0" text="Lindsay Stanley Kay," styleRef="textStyle"/>
+<text origin="0.0,60.0" text="Student ID 0038465," styleRef="textStyle"/>
+<text origin="0.0,80.0" text="E-mail lsk13@student.canterbury.ac.nz" styleRef="textStyle"/>
+<text origin="0.0,100.0" text="September 25," styleRef="textStyle"/>
+<text origin="0.0,120.0" text="2004" styleRef="textStyle"/>
+<text origin="0.0,140.0" text="" styleRef="textStyle"/>
+<text origin="0.0,160.0" text="Contents of this Distribution" styleRef="textStyle"/>
+<text origin="0.0,180.0" text="-----------------------------" styleRef="textStyle"/>
+<text origin="0.0,200.0" text="" styleRef="textStyle"/>
+<text origin="0.0,220.0" text="classes - compiled class files" styleRef="textStyle"/>
+<text origin="0.0,240.0" text="docs - HTML documentation" styleRef="textStyle"/>
+<text origin="0.0,260.0" text="jars - VGLViewer and third-party JARs" styleRef="textStyle"/>
+<text origin="0.0,280.0" text="src - VGLViewer source code, as a Together ControlCentre project (vglViewer.tpr)" styleRef="textStyle"/>
+<text origin="0.0,300.0" text="vglFiles - sample VGL XML files" styleRef="textStyle"/>
+<text origin="0.0,320.0" text=" " styleRef="textStyle"/>
+<text origin="0.0,340.0" text="Bugs" styleRef="textStyle"/>
+<text origin="0.0,360.0" text="----" styleRef="textStyle"/>
+<text origin="0.0,380.0" text="" styleRef="textStyle"/>
+<text origin="0.0,400.0" text="Speed dependent automatic zooming hangs VGLViewer in a few seconds when run from" styleRef="textStyle"/>
+<text origin="0.0,420.0" text="the command line. However, in Together ControlCentre, VGLViewer runs OK. You can" styleRef="textStyle"/>
+<text origin="0.0,440.0" text="load the project file into Together, change the command line parameter in the" styleRef="textStyle"/>
+<text origin="0.0,460.0" text="Run dialog to point to the test VGL file and run it, or see me and I'll demonstrate it." styleRef="textStyle"/>
+</vgl>
