@@ -1,4 +1,4 @@
-SDAZ
+h2. SDAZ
 ----------------------
 
 Speed Dependent Automatic Zooming
