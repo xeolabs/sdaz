@@ -10,7 +10,7 @@ SDAZ implements a navigation technique invented by Takeo Igarashi and Ken Hinckl
 - [Maven Repository][sdaz-maven-repo] 
 
 ## Author
-Compass is written by [Lindsay Kay][neocoders-github]. Lindsay has a skunkworks at [http://www.neocoders.com][neocoders.com] where you can find more of this kind of stuff.
+SDAZ is written by [Lindsay Kay][neocoders-github]. Lindsay has a skunkworks at [http://www.neocoders.com][neocoders.com] where you can find more of this kind of stuff.
 
 [sdaz-home]: http://www.neocoders.com/portal/projects/sdaz
 [sdaz-downloads]: http://www.neocoders.com/downloads/sdaz
